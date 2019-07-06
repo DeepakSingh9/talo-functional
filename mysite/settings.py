@@ -139,6 +139,6 @@ EMAIL_PORT=587
 EMAIL_USER_TLS=True
 DEFAULT_FROM_EMAIL='indeepak9@gmail.com'
 ACCOUNT_EMAIL_SUBJECT_PREFIX='TEST'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
