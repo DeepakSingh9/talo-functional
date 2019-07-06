@@ -132,13 +132,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 
-EMAIL_HOST='smtp.gmail.com'
-EMAIL_HOST_USER='indeepak9'
-EMAIL_HOST_PASSWORD='servoflexjack_moon_11'
-EMAIL_PORT=587
-EMAIL_USER_TLS=True
-DEFAULT_FROM_EMAIL='indeepak9@gmail.com'
-ACCOUNT_EMAIL_SUBJECT_PREFIX='TEST'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com' # mail service smtp
+EMAIL_HOST_USER = 'indeepak9@gmail.com' # email id
+EMAIL_HOST_PASSWORD = 'servoflexjack_moon_11' #password
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 
