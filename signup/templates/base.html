@@ -21,8 +21,14 @@
 <body>
   <nav>
     <div class="nav-wrapper black lighten-4">
-            <a href="#" class="brand-logo">
+        {% if request.user.is_autheticated %}
+        <a href="{% url 'home' username='request.user.username' %}" class="brand-logo">
             <img class="responsive-img" src="{% static 'images/images/taloscope6.png' %}" style="margin-left:30px;height:70px;" ></a>
+        {% else %}
+        <a href="{% url 'signin' %}" class="brand-logo">
+            <img class="responsive-img" src="{% static 'images/images/taloscope6.png' %}" style="margin-left:30px;height:70px;" ></a>
+        {% endif %}
+
 
         </div>
     </div>

@@ -245,7 +245,7 @@ edit about me</a></li>
          </div>
     </div>
             </div>
-<span hidden id="p1">{{request.get_full_path}}</span>
+<span hidden id="p1">{{ request.build_absolute_uri }}{{ object.get_absolute_url }}</span>
 <script>
 $(document).ready(function(){
    $('.modal').modal();

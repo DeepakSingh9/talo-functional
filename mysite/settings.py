@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'resume',
 ]
 
+
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -126,3 +129,16 @@ STATIC_ROOT = os.path.join(BASE_DIR, STATIC_URL)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_HOST_USER='indeepak9'
+EMAIL_HOST_PASSWORD='servoflexjack_moon_11'
+EMAIL_PORT=587
+EMAIL_USER_TLS=True
+DEFAULT_FROM_EMAIL='indeepak9@gmail.com'
+ACCOUNT_EMAIL_SUBJECT_PREFIX='TEST'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
