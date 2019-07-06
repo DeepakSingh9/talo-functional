@@ -25,7 +25,7 @@ SECRET_KEY = 'jt$28cnln1lenjjqsv7asm*^1lx!%^=x*0p2(qt*8_7hr4r1t6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['dscript.pythonanywhere.com']
 
 
 # Application definition
