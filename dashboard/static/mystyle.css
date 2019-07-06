@@ -461,3 +461,9 @@ margin-left:5px;
 .registration-ul li{
 list-style-type:square !important;
 }
+
+.newtextarea{
+border:1px solid !important;
+height:150px important;
+
+}
