@@ -3,8 +3,8 @@ from django.contrib.auth import views as auth_views
 from . import views
 
 urlpatterns=[
-             url(r'^signin/$',views.user_login,name='signin'),
-             url(r'^signup/$',views.user_registration,name='signup'),
+             url(r'^signin/$',views.user_signin,name='signin'),
+             url(r'',views.user_registration,name='signup'),
              url(r'^logout/$',views.user_logout,name='logout'),
              url(r'password_reset/$', auth_views.password_reset,
              {'template_name': 'registration/PasswordFiles/password_reset_form.html'}, name='password_reset'),

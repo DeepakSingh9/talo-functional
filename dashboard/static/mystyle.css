@@ -467,3 +467,12 @@ border:1px solid !important;
 height:150px important;
 
 }
+
+
+.signup-label{
+color:black !important;
+}
+
+.signup-form ::placeholder{
+color:#9e9e9e !important;
+}

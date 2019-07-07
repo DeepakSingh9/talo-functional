@@ -17,7 +17,7 @@ class Profile(models.Model):
     #phone_regex = RegexValidator(regex=r'^\+?1?\d{9,10}$',
                                  #message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed.")
     #mobile_number = models.CharField(validators=[phone_regex], blank=True, max_length=128)
-    profile_image=models.ImageField(upload_to='profilepic/',blank=True,null=True,)
+    profile_image=models.ImageField(upload_to='profilepic/',blank=True,null=True,default='profilepic/astro2.jpg')
     about_me=models.TextField(max_length=150,blank=True)
     #skills=models.ManyToManyField(Skill,blank=True,null=True,related_name='has_skills')
     place=models.CharField(max_length=20,blank=True,null=True)

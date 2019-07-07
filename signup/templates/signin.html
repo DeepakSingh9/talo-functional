@@ -7,6 +7,13 @@
     <div class="col s4 offset-s3" style="margin-top:50px;border:0.2px solid #eeeeee;">
         <div class="row">
             <div class="col s12">
+                {% if messages %}
+            {% for k in messages %}
+            <div class="col s12 red lighten-2 white-text">
+            <span style="padding:2px;">{{k}}</span>
+            </div>
+            {% endfor %}
+            {% endif %}
         <div class="col s6">
             <p class="flow-text" style="">Sign In</p>
         </div>
@@ -21,10 +28,10 @@
                 {% csrf_token %}
                 <div class="col s12 input-field">
                     <input type="text" name="username" id="id_username">
-                    <label for="id_username">username</label>
+                    <label for="id_username" class="signup-label">username</label>
                 </div>
                 <div class="col s12 input-field">
-                    <input type="password" name="password" id="id_password">
+                    <input type="password" name="password" id="id_password" class="signup-label">
                     <label for="id_password">password</label>
                 </div>
                    <div class="">

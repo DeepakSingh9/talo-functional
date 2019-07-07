@@ -13,7 +13,7 @@ from django.contrib import messages
 # Create your views here.
 
 
-def user_login(request):
+def user_signin(request):
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
@@ -22,11 +22,13 @@ def user_login(request):
             if user.is_active:
                 login(request, user)
                 return redirect('home',username=user.username)
-            else:
-                return HttpResponse('Your account is disabled')
         else:
-            return HttpResponse('Invalid login details')
-    return render(request,'signin.html', {})
+            messages.error(request,'invalid login details')
+            return redirect('signin')
+    else:
+        form=LoginForm()
+
+    return render(request,'signin.html', {'form':form})
 
 
 
@@ -63,6 +65,6 @@ def user_registration(request):
 
 def user_logout(request):
     logout(request)
-    return redirect('registration')
+    return redirect('')
 
 

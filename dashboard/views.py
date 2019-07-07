@@ -280,7 +280,7 @@ def edit_education(request,pk):
 
 def user_logout(request):
     logout(request)
-    return redirect('signin')
+    return redirect('/')
 
 
 

@@ -66,8 +66,8 @@
             </ul>
         </div>
     </div>
-    <div class="col s5">
-    <div class="row z-depth-1" style="margin-top:0px;border:1px #eeeeee solid;padding:10px;">
+    <div class="col s5" style="margin-top:50px;">
+    <div class="row z-depth-1" style="margin-top:0px;border:1px #eeeeee solid;padding:20px;">
         <div class="col s12">
         {% if messages %}
             {% for k in messages %}
@@ -79,54 +79,50 @@
             <p class="flow-text" style="margin-top:px;">Sign Up</p>
         </div>
         <div class="col s12">
-        <form method="post" action="/signup/">
+        <form method="post" action="/signup/" class="signup-form">
                   {% csrf_token %}
                 <div class="row">
                     <div class="col s6">
                         <div class="input-field">
                     <input placeholder="ankur.bhatia@fashion.com" name="email" id="id_email" type="email" class="validate">
-                    <label for="id_email">email</label>
+                    <label for="id_email" class="signup-label">Email</label>
                 </div>
                     </div>
-                    <div class="col s6">
-                         <div class="input-field">
-                    <input placeholder="ankur_fashion_tech" name="username" id="id_username_reg" type="text" class="validate">
-                    <label for="id_username_reg">username</label>
-                </div>
-                    </div>
-                </div>
-                <div class="row">
                     <div class="col s6">
                         <div class="input-field">
                     <input placeholder="ankur" name="first_name" id="id_first_name" type="text" class="validate">
-                    <label for="id_first_name">first name</label>
+                    <label for="id_first_name" class="signup-label">Name</label>
                 </div>
                     </div>
+
+                </div>
+                <div class="row">
                     <div class="col s6">
+                         <div class="input-field">
+                    <input placeholder="ankur_fashion_tech" name="username" id="id_username_reg" type="text" class="validate">
+                    <label for="id_username_reg" class="signup-label">Username</label>
+                </div>
+                    </div>
+
+                    <!--<div class="col s6">
                         <div class="input-field">
                     <input placeholder="bhatia" name="second_name" id="id_last_name" type="text" class="validate">
                     <label for="id_last_name">last name</label>
                 </div>
+                    </div>-->
+                     <div class="col s6">
+                         <div class="input-field">
+                    <input placeholder="password" name="password" id="id_password_reg" type="password" class="validate">
+                    <label for="id_password_reg" class="signup-label">Password</label>
+                </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col s6">
-                         <div class="input-field">
-                    <input placeholder="password" name="password" id="id_password_reg" type="password" class="validate">
-                    <label for="id_password_reg">password</label>
-                </div>
-                    </div>
-                    <div class="col s6">
-                         <div class="input-field">
-                    <input placeholder="password" name="password" id="id_password" type="password" class="validate">
-                    <label for="id_password">confirm password</label>
-                </div>
-                    </div>
                 </div>
 
                 <div class="input-field">
-                    <input placeholder="describe who you are" name="description" id="id_description" type="text" class="validate">
-                    <label for="id_description">description</label>
+                    <input placeholder="describe who you are e:g architect,chef,actor,student,consultant" name="description" id="id_description" type="text" class="validate">
+                    <label for="id_description" class="signup-label">What you do</label>
                 </div>
 
                 <div class="col s12 center-align">
