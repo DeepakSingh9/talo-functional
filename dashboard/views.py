@@ -292,6 +292,7 @@ def search(request):
 
         if srch:
             match=Profile.objects.filter(Q(user__first_name__icontains=srch)|
+                                         Q(user__username__icontains=srch)|
                                          Q(description__icontains=srch)
                                          )
             if match:
@@ -331,6 +332,14 @@ def unfollow(request,username):
         return redirect('profile',username=profile.user.username)
     return redirect('profile',username=profile.user.username)
 
+
+
+def liked_page(request,username):
+    current_user=request.user
+    profile=get_object_or_404(Profile,user=current_user)
+    liked_by=current_user.profile.followed_by.all()
+    likes=current_user.profile.follows.all()
+    return render(request,'dashboard/stars.html',{'user':current_user,'liked_by':liked_by,'likes':likes})
 
 def block(request,username):
     profile=get_object_or_404(Profile,user=User.objects.get(username=username))

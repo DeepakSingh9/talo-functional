@@ -29,21 +29,21 @@
         <div class="col  center-align s3 z-depth-1 white" style="margin-top:10px;margin-left:20px;">
                 <div class="info">
                     <div class="row">
-                        <div class="col s6 profile-box">
+                        <div class="col 12 profile-box" style="margin-top:10px;margin-left:80px;">
                             {% if user.profile.profile_image %}
-                   <img src="{{user.profile.profile_image.url}}" alt="" class=" responsive-img" style="margin-top:10px;height:120px;width:120px;">
-                            <a href="{% url 'image_upload' username=user.username%}"><i class="material-icons tiny left"></i>change image</a>
+                   <img src="{{user.profile.profile_image.url}}" alt="" class="circle responsive-image" style="height:120px;width:120px;">
+                            <a href="{% url 'image_upload' username=user.username %}"><i class="material-icons tiny left"></i>change image</a>
                             {% else %}
-                            <img src="images/marcus.webp" alt="" class=" responsive-img" style="margin-top:10px;height:120px;width:120px;">
-                           <a href="{% url 'image_upload' username=user.username %}"><i class="material-icons tiny left"></i>add image</a>
+                            <img src="{% static 'images/images/astro2.jpg' %}" alt="" class="circle responsive-img" style="height:120px;width:120px;">
+                            <a href="{% url 'image_upload' username=user.username %}"><i class="material-icons tiny left"></i>upload image</a>
                             {% endif %}
                             <!-- notice the "circle" class -->
                         </div>
-                        <div class="col s6 left-align">
-                            <div class="" style="margin-top:25px;">
+                        <div class="col s12" style="margin-top:-20px;">
+                            <div class="" style="">
                     <p class="name" style="">{{user.first_name}}</p>
                     <p class="grey-text text-darken-2 who_are" style="">{{user.profile.description}}</p>
-                                <span class="grey lighten-1 btn-flat"><i class="material-icons left">star_border</i>&nbsp;{{user.profile.followed_by.count}}</span>
+                                <span class="btn-flat grey lighten-1"><i class="material-icons left">star_border</i>&nbsp;{{user.profile.followed_by.count}}</span>
                                 </div>
                             </div>
                         </div>

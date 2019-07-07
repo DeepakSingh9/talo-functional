@@ -26,4 +26,5 @@ urlpatterns=[url(r'^home/(?P<username>[\w.@+-]+)/$',views.home,name='home'),
              url(r'^unfollow/(?P<username>[\w.@+-]+)/$',views.unfollow,name='unfollow'),
              url(r'^block/(?P<username>[\w.@+-]+)/$',views.block,name='block'),
              url(r'^unblock/(?P<username>[\w.@+-]+)/$',views.unblock,name='unblock'),
+             url(r'^liked_by/(?P<username>[\w.@+-]+)/$',views.liked_page,name='stars')
 ]

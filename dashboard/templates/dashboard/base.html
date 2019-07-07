@@ -32,11 +32,11 @@
         {% endif %}
           <ul class="right" style="display:inline-block;margin-right:70px;">
               <li>
-                  <form method="post" action="/search/">
+                  <form method="post" action="/search/" class="nav-form">
                       {% csrf_token %}
-                      <div class="input-field">
-          <input class="search" name="search" placeholder="search by name or skill" id="search" type="search">
-          <label class="label-icon" for="search"><i class="material-icons white-text text-lighten-1 ">search</i></label>
+                      <div class="input-field" style="height:100%">
+          <input class="" name="search" placeholder="search" id="search" type="search">
+          <label class="" for="search"></label>
           <!--<i class="material-icons cyan-text text-darken-4">close</i>-->
                      </div>
                   </form>
@@ -46,7 +46,7 @@
                   </a>
               </li>
               <li class="top-icons">
-                  <a href=""><i class="material-icons white-text ">settings</i>
+                  <a href="{% url 'stars' username=request.user.username %}"><i class="material-icons white-text ">star</i>
                   </a>
               </li>
               <li class="top-icons">
